@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <title>Examen</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">4C</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">Animales</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Adopciones</a>
+                            </li>
+                            
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Candidatos</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <h1 class="text-center mt-5">Gestión de Mascotas en Adopción</h1>
+            <div class="container">
+                <div class="row mt-4">
+                    <div class="col-6">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
+                            <button class="btn btn-outline-success" type="submit">Buscar</button>
+                        </form>
+                    </div>
+                    
+                    <div class="col-6">
+                        <div class="text-end">
+                                <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                Registrar Mascota
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                
+            <div class="container">
+                <div class="modal fade btn-primary btn-outline-primary" 
+                                id="exampleModal" 
+                                tabindex="-1" 
+                                aria-labelledby="exampleModalLabel" 
+                                aria-hidden="true">
+
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Registrar Mascota</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                                    
+                            <div class="modal-body">
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="inputName" class="form-label">Nombre</label>
+                                        <input type="text" class="form-control" id="inputName" placeholder="Pepe">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="inputAnimal" class="form-label">Animal</label>
+                                        <input type="text" class="form-control" id="inputAnimal" placeholder="Gato">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="inputAge" class="form-label">Edad</label>
+                                        <input type="number" class="form-control" id="inputAge" placeholder="3">
+                                    </div>
+
+                                    <div class="mb-3">
+                                        <label for="inputRace" class="form-label">Raza</label>
+                                        <input type="text" class="form-control" id="inputRace" placeholder="Persa">
+                                    </div>
+
+                                    <div class="mb-3">
+                                            <label for="roles" class="form-label">Estado</label>
+                                            <select class="form-select" id="selectStates" aria-label="Default select example">
+                                                <option selected>Selecciona el estado</option>
+                                                <option value="1">Borrador</option>
+                                                <option value="2">Público</option>
+                                                <option value="3">Deshabilitado</option>
+                                                <option value="4">Adoptado</option>
+                                            </select>
+                                    </div>
+
+                                </form>
+                            </div>
+                                                
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="btnClose">Cerrar</button>
+                                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="btnSave">Guardar Cambios</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container mt-3">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr class="table-success">
+                                <th scope="col">No.</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Animal</th>
+                                <th scope="col">Raza</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Perro</td>
+                                <td>Bulldoser</td>
+                                <td>
+                                    Adoptado
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jakob</td>
+                                <td>Gato</td>
+                                <td>Persa</td>
+                                <td>
+                                    Público
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Jose</td>
+                                <td>Ballena</td>
+                                <td>Jorobada</td>
+                                <td>
+                                    Deshabilitado
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">4</th>
+                                <td>Pepe</td>
+                                <td>Perico</td>
+                                <td>Verde</td>
+                                <td>
+                                    Adoptado
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>Bombon</td>
+                                <td>Perro</td>
+                                <td>Bulldoser</td>
+                                <td>
+                                    Borrador
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> 
+            </div>
+        </main>
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</html>
